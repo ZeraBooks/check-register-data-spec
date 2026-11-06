@@ -1,0 +1,11 @@
+{
+  "bank": "Granite Valley Bank",
+  "business": "Copperline Electric LLC",
+  "account_last4": "7983",
+  "period_start": "2026-09-01",
+  "period_end": "2026-09-30",
+  "checks_paid_count": 5,
+  "checks_paid_total": "3428.97",
+  "register_file": "samples/registers/copperline-electric-2026-q3.csv",
+  "fictional": true
+}

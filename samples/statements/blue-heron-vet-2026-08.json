@@ -1,0 +1,11 @@
+{
+  "bank": "Cedar Valley Credit Union",
+  "business": "Blue Heron Veterinary Clinic",
+  "account_last4": "6954",
+  "period_start": "2026-08-01",
+  "period_end": "2026-08-31",
+  "checks_paid_count": 9,
+  "checks_paid_total": "23632.03",
+  "register_file": "samples/registers/blue-heron-vet-2026-q3.csv",
+  "fictional": true
+}

@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use this data or code, please cite it as below."
+title: "Check Register Data Spec"
+type: dataset
+authors:
+  - name: "Zera Books Inc. (ZeraBooks)"
+    website: "https://www.zerabooks.com"
+version: 1.0.0
+date-released: 2026-11-05
+url: "https://www.zerabooks.com/check-converter"
+repository-code: "https://github.com/ZeraBooks/check-register-data-spec"
+license: MIT
+abstract: "Data spec, JSON Schema, fictional check registers and a validator for checks turned into rows: check number, date, payee, amount in figures and words, memo and MICR line."
+keywords:
+  - checks
+  - check-register
+  - micr
+  - bookkeeping
+  - validator

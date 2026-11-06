@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/ZeraBooks/check-register-data-spec/schema/check-register-row.schema.json",
+  "title": "Check register row",
+  "description": "One paper check turned into data. A check prints its amount twice, in figures (the courtesy amount) and in words (the legal amount); both are kept so they can be compared. The MICR line along the bottom repeats the routing number, account number and check number in magnetic ink; it is kept as printed and also split into fields.",
+  "type": "object",
+  "required": ["check_number", "date", "payee", "amount", "amount_written", "routing_number", "account_last4", "micr_line", "status"],
+  "additionalProperties": false,
+  "properties": {
+    "check_number": {"type": "string", "pattern": "^[0-9]{1,10}$", "description": "Number printed in the top right corner."},
+    "date": {"type": "string", "format": "date", "description": "Date written on the check, ISO 8601 (YYYY-MM-DD)."},
+    "payee": {"type": "string", "description": "Pay to the order of. Blank only on a void check."},
+    "amount": {"type": "string", "pattern": "^$|^[0-9]+\\.[0-9]{2}$", "description": "Courtesy amount in figures, positive, two decimals. Blank on a void check."},
+    "amount_written": {"type": "string", "description": "Legal amount in words exactly as written, e.g. 'One thousand two hundred fifty and 00/100'. 'VOID' on a void check."},
+    "memo": {"type": "string", "description": "Memo line. Often an invoice or account number."},
+    "bank": {"type": "string", "description": "Drawee bank name printed on the check."},
+    "routing_number": {"type": "string", "pattern": "^[0-9]{9}$", "description": "ABA routing transit number from the MICR line. Passes the 3-7-1 checksum."},
+    "account_last4": {"type": "string", "pattern": "^[0-9]{4}$", "description": "Last four digits of the account number. Store no more than this outside the MICR line."},
+    "micr_line": {"type": "string", "description": "MICR line as printed, with U+2448 (on-us) and U+2446 (transit) symbols: '⑈001043⑈ ⑆512345674⑆ 0004471229⑈'."},
+    "status": {"enum": ["cleared", "outstanding", "void", "stopped"]},
+    "cleared_date": {"type": "string", "pattern": "^$|^[0-9]{4}-[0-9]{2}-[0-9]{2}$", "description": "Date the check cleared the bank, from the bank statement. Blank unless status is cleared."},
+    "source_file": {"type": "string"}
+  }
+}

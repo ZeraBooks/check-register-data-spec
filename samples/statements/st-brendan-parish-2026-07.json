@@ -1,0 +1,11 @@
+{
+  "bank": "Harbor Point Savings Bank",
+  "business": "St. Brendan Parish Food Pantry",
+  "account_last4": "2431",
+  "period_start": "2026-07-01",
+  "period_end": "2026-07-31",
+  "checks_paid_count": 6,
+  "checks_paid_total": "16012.31",
+  "register_file": "samples/registers/st-brendan-parish-2026-q3.csv",
+  "fictional": true
+}

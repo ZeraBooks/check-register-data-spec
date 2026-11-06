@@ -1,0 +1,11 @@
+{
+  "bank": "Northfield National Bank",
+  "business": "Tan & Ruiz Law Group",
+  "account_last4": "4142",
+  "period_start": "2026-08-01",
+  "period_end": "2026-08-31",
+  "checks_paid_count": 11,
+  "checks_paid_total": "25811.05",
+  "register_file": "samples/registers/tan-and-ruiz-law-2026-q3.csv",
+  "fictional": true
+}

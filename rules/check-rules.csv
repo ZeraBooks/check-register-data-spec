@@ -1,0 +1,17 @@
+rule_id,severity,rule,why_it_matters
+CHK-001,error,"Every required column is present, and check_number, date, routing_number, account_last4, micr_line and status are filled on every row.",A row without its check number or account can't be matched to the bank statement.
+CHK-002,error,"amount is positive with two decimals, digits only (no $ or commas). Blank only on a void check.",Figures with symbols sort and sum as text in a spreadsheet.
+CHK-003,error,The written amount can be read as a number.,"If the words can't be read, the legal amount is unknown and the check needs a human."
+CHK-004,error,The written amount and the amount in figures agree to the cent.,"Under UCC 3-114, words prevail over numbers when they conflict. A mismatch is either a misread or a check written wrong; both need a look before the row is trusted."
+CHK-005,error,The routing number passes the ABA checksum: 3(d1+d4+d7) + 7(d2+d5+d8) + (d3+d6+d9) is a multiple of 10.,One misread MICR digit almost always breaks the checksum.
+CHK-006,warning,The first two digits of the routing number are in an assigned Federal Reserve range (00-12 or 21-32; 61-72 and 80 for special use).,The fictional samples use 5x prefixes on purpose so they never match a real bank; real checks should not.
+CHK-007,error,The check number in the MICR line matches the printed check number.,A mismatch means one of them was read wrong or the check was printed on someone else's stock.
+CHK-008,error,The routing number field matches the routing number in the MICR line.,The field should come from the MICR line and agree with it.
+CHK-009,error,The account number in the MICR line ends with account_last4.,Keeps checks from two accounts out of one register.
+CHK-010,error,No check number appears twice in one account.,A duplicate is a scan read twice or a reused check number; either way the books would double count it.
+CHK-011,warning,"Check numbers run in sequence, or the missing number is in the register as void or stopped.",Gaps are where missing checks hide. Auditors ask about every one.
+CHK-012,error,date and cleared_date are real calendar dates and a check does not clear before the date written on it.,A check that cleared before it was written means a misread date.
+CHK-013,error,"A void check has status void, no amount and 'VOID' as the written amount.",Keeps a voided check in the sequence without adding to any total.
+CHK-014,error,Cleared checks with a cleared_date in the statement period add up to the statement's printed checks-paid total and count.,The register and the bank agree on what cleared. This is the check that catches a missed scan.
+CHK-015,warning,payee is filled on every check that is not void.,A check without a payee can't be categorized.
+CHK-016,warning,status is cleared only when cleared_date is filled.,An outstanding check marked cleared hides an open item at reconciliation.

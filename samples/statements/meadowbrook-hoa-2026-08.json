@@ -1,0 +1,11 @@
+{
+  "bank": "Prairie Trust Bank",
+  "business": "Meadowbrook Homeowners Association",
+  "account_last4": "7818",
+  "period_start": "2026-08-01",
+  "period_end": "2026-08-31",
+  "checks_paid_count": 5,
+  "checks_paid_total": "13274.02",
+  "register_file": "samples/registers/meadowbrook-hoa-2026-q3.csv",
+  "fictional": true
+}

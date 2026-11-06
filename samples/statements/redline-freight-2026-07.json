@@ -1,0 +1,11 @@
+{
+  "bank": "Prairie Trust Bank",
+  "business": "Redline Freight Co",
+  "account_last4": "5416",
+  "period_start": "2026-07-01",
+  "period_end": "2026-07-31",
+  "checks_paid_count": 8,
+  "checks_paid_total": "20513.77",
+  "register_file": "samples/registers/redline-freight-2026-q3.csv",
+  "fictional": true
+}

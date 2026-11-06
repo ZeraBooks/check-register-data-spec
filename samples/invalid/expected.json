@@ -1,0 +1,92 @@
+[
+  {
+    "file": "samples/invalid/blank-check-number.csv",
+    "must_fail": "CHK-001",
+    "what_is_wrong": "a row with no check number",
+    "statement": null
+  },
+  {
+    "file": "samples/invalid/dollar-sign-in-amount.csv",
+    "must_fail": "CHK-002",
+    "what_is_wrong": "amount written as $123.45",
+    "statement": null
+  },
+  {
+    "file": "samples/invalid/unreadable-words.csv",
+    "must_fail": "CHK-003",
+    "what_is_wrong": "a misspelled written amount",
+    "statement": null
+  },
+  {
+    "file": "samples/invalid/figures-and-words-disagree.csv",
+    "must_fail": "CHK-004",
+    "what_is_wrong": "figures read with a slipped decimal: ten times the written amount",
+    "statement": null
+  },
+  {
+    "file": "samples/invalid/bad-routing-checksum.csv",
+    "must_fail": "CHK-005",
+    "what_is_wrong": "last routing digit misread on every row",
+    "statement": null
+  },
+  {
+    "file": "samples/invalid/micr-serial-mismatch.csv",
+    "must_fail": "CHK-007",
+    "what_is_wrong": "MICR check number differs from the printed one",
+    "statement": null
+  },
+  {
+    "file": "samples/invalid/routing-field-mismatch.csv",
+    "must_fail": "CHK-008",
+    "what_is_wrong": "routing field doesn't match the MICR line",
+    "statement": null
+  },
+  {
+    "file": "samples/invalid/wrong-account.csv",
+    "must_fail": "CHK-009",
+    "what_is_wrong": "a check from another account in this register",
+    "statement": null
+  },
+  {
+    "file": "samples/invalid/duplicate-check.csv",
+    "must_fail": "CHK-010",
+    "what_is_wrong": "the same check scanned twice",
+    "statement": null
+  },
+  {
+    "file": "samples/invalid/gap-in-sequence.csv",
+    "must_fail": "CHK-011",
+    "what_is_wrong": "a check missing from the register (warning)",
+    "statement": null
+  },
+  {
+    "file": "samples/invalid/cleared-before-written.csv",
+    "must_fail": "CHK-012",
+    "what_is_wrong": "a cleared date three days before the check date",
+    "statement": null
+  },
+  {
+    "file": "samples/invalid/void-with-amount.csv",
+    "must_fail": "CHK-013",
+    "what_is_wrong": "a void check still carrying an amount",
+    "statement": null
+  },
+  {
+    "file": "samples/invalid/missed-cleared-check.csv",
+    "must_fail": "CHK-014",
+    "what_is_wrong": "an August check marked outstanding though the bank paid it",
+    "statement": "samples/statements/juniper-lane-bakery-2026-08.json"
+  },
+  {
+    "file": "samples/invalid/no-payee.csv",
+    "must_fail": "CHK-015",
+    "what_is_wrong": "a check with no payee (warning)",
+    "statement": null
+  },
+  {
+    "file": "samples/invalid/cleared-without-date.csv",
+    "must_fail": "CHK-016",
+    "what_is_wrong": "status cleared with no cleared date (warning)",
+    "statement": null
+  }
+]

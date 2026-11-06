@@ -1,0 +1,11 @@
+{
+  "bank": "Northfield National Bank",
+  "business": "Brightwater Landscaping Inc",
+  "account_last4": "1428",
+  "period_start": "2026-08-01",
+  "period_end": "2026-08-31",
+  "checks_paid_count": 7,
+  "checks_paid_total": "13384.08",
+  "register_file": "samples/registers/brightwater-landscaping-2026-q3.csv",
+  "fictional": true
+}

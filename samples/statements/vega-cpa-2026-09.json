@@ -1,0 +1,11 @@
+{
+  "bank": "Lakeshore Community Bank",
+  "business": "Marisol Vega CPA",
+  "account_last4": "1628",
+  "period_start": "2026-09-01",
+  "period_end": "2026-09-30",
+  "checks_paid_count": 10,
+  "checks_paid_total": "16187.17",
+  "register_file": "samples/registers/vega-cpa-2026-q3.csv",
+  "fictional": true
+}
